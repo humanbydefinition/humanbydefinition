@@ -110,7 +110,7 @@ the textureviewer allows you to upload a fragment shader to the `p5.js` sketch, 
 > {{< collapse summary="**uniforms**" >}}
 the following uniforms are available to the shader:
 - `time` - `frameCount * 0.01` is passed to the shader
-- `resolution` - the `windowWidth` and `windowHeight` are passed to the shader
+- `resolution` - the `sketch width` and `sketch height` are passed to the shader
 - `seed` - a random value between 0 and 1 is passed to the shader. get a new random value by resetting the sketch.
 > {{< /collapse >}}
 
