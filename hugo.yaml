@@ -117,7 +117,7 @@ params:
       url: "https://www.instagram.com/humanbydefinition/"
 
   editPost:
-    URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+    URL: "https://github.com/humanbydefinition/humanbydefinition.github.io/tree/main/content"
     Text: "suggest changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
