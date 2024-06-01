@@ -16,6 +16,8 @@ the [`ascii playground`](/playground/) is a tool that allows you to create ascii
 
 the tool is accessible through an extensive [`Tweakpane`](https://tweakpane.github.io/docs/) overlay, which allows you to control and customize the parameters of the tool during run-time. the tool also features the ability to record your canvas using [`p5.Capture`](https://github.com/tapioca24/p5.capture), so you can save your creations as videos or images.
 
+**note**: as of now, the tool is not mobile-friendly *yet*, but it might be in the future.
+
 ---
 
 ## basic features

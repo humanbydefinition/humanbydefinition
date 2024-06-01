@@ -27,6 +27,8 @@ read more about the project here: [`https://github.com/humanbydefinition/p5js-as
 
 ### [`p5.js ascii playground`](/playground/)
 
+**note:** not mobile-friendly *yet* 
+
 this tool features a more complex ascii rendering pipeline, featuring a set of customizable simulations to play around with. besides that, it features multiple pre shader effects to apply to the set simulations running in the `p5.js` sketch, creating fun and interesting visuals. it also features a multitude of gradient shaders, whose randomness can be controlled through the `Tweakpane` overlay, adding to the visual complexity of the rendered ascii art.
 
 i am currently actively working on this tool and plan to include more simulations and effects in the future. feel free to reach out to me if you have any suggestions or ideas for this project.
