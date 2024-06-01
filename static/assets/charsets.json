@@ -1,0 +1,78 @@
+[
+    {
+        "name": "numbers",
+        "characterset": "0123456789"
+    },
+    {
+        "name": "dice",
+        "characterset": "ôöòûùÿ"
+    },
+    {
+        "name": "arrows",
+        "characterset": "←↑→↓"
+    },
+    {
+        "name": "currencies",
+        "characterset": "$£¥▬"
+    },
+    {
+        "name": "tetrisTblocks",
+        "characterset": "▄▌▐█"
+    },
+    {
+        "name": "smileys",
+        "characterset": "☺☻"
+    },
+    {
+        "name": "pointers",
+        "characterset": "╚╔╩╟"
+    },
+    {
+        "name": "ySymbols",
+        "characterset": "═╬╦╠"
+    },
+    {
+        "name": "musicalNotes",
+        "characterset": "àâäåçê♪♫"
+    },
+    {
+        "name": "radialPulse",
+        "characterset": "░▒▓▒░"
+    },
+    {
+        "name": "pulsingBars",
+        "characterset": "úñÑªÑñú"
+    },
+    {
+        "name": "shades",
+        "characterset": "□■∩ε¬⌐"
+    },
+    {
+        "name": "quarterBlocks",
+        "characterset": "ⁿ∞φ²"
+    },
+    {
+        "name": "waves",
+        "characterset": "~≈"
+    },
+    {
+        "name": "unnamed",
+        "characterset": "ÉÇüéÆóíá"
+    },
+    {
+        "name": "cartSuites",
+        "characterset": "♠♣♥♦"
+    },
+    {
+        "name": "quarterVerticalSticks",
+        "characterset": "ÉΘ°Æ"
+    },
+    {
+        "name": "quarterHorizontalSticks",
+        "characterset": "ü∙Φí"
+    },
+    {
+        "name": "propeller",
+        "characterset": "|/-\\"
+    }
+]

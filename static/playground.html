@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ascii playground</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+
+      /* Prevents scrolling on mobile */
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    .tp-rotv {
+      border-radius: 0 !important;
+      overflow-y: auto;
+    }
+
+    .tp-rotv {
+      height: 100vh !important;
+    }
+
+    .tp-fldv_b {
+      border-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+
+    #tweakpane-container {
+      float: left;
+      width: 375px;
+      height: 100vh;
+    }
+
+    #tweakpane-container.collapsed {
+      width: 50px;
+    }
+
+    #canvas-container {
+      float: right;
+      width: calc(100% - 375px);
+      height: 100vh;
+    }
+
+    #canvas-container.expanded {
+      width: calc(100% - 50px);
+    }
+  </style>
+
+  <!-- Import libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.1.10/dist/tweakpane.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/tweakpane-plugin-chromatic@0.0.3/dist/tweakpane-plugin-chromatic.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@tweakpane/plugin-essentials@0.1.8/dist/tweakpane-plugin-essentials.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@0b5vr/tweakpane-plugin-rotation@0.1.1/dist/tweakpane-plugin-rotation.min.js"></script>
+  <script src="libraries/tweakpane-plugin-file-import.min.js"></script>
+  <script src="libraries/tweakpane-plugin-infodump-0.3.0.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@pangenerator/tweakpane-textarea-plugin@1.0.4/dist/tweakpane-textarea-plugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5.capture@1.4.1/dist/p5.capture.umd.min.js"></script>
+
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+
+  <script src="bundle_obfuscated.js"></script>
+
+</head>
+
+<body>
+  <div id="tweakpane-container"></div>
+  <div id="canvas-container"></div>
+</body>
+
+</html>
