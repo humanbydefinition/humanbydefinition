@@ -31,7 +31,7 @@ this tool features a more complex ascii rendering pipeline, featuring a set of c
 
 i am currently actively working on this tool and plan to include more simulations and effects in the future. feel free to reach out to me if you have any suggestions or ideas for this project.
 
-the tool can be found here: [`humanbydefinition.dev/playground`](/playground/)
+the tool can be found here: [`/playground`](/playground/)
 
 if you create and share something cool with this tool, i'd love to see and interact with it! ❤️ feel free to tag me on instagram [@humanbydefinition](https://www.instagram.com/humanbydefinition/) or reach out to me via other social media or via e-mail.
 
