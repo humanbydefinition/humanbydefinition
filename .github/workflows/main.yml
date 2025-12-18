@@ -13,32 +13,25 @@ concurrency:
 
 jobs:
   github-metrics:
-    runs-on: ubuntu-latest
+    # Critical: ubuntu-latest is now 24.04; released Metrics image can fail building there.
+    runs-on: ubuntu-22.04
     environment:
       name: production
     permissions:
       contents: write
 
     steps:
-      - name: Generate brutalist textmode metrics (Bescii-Mono)
+      - name: Generate brutalist textmode metrics
         uses: lowlighter/metrics@v3.34
         with:
-          # Required
           token: ${{ secrets.METRICS_TOKEN }}
-
-          # Account
           user: humanbydefinition
-
-          # Output
           filename: github-metrics.svg
-
-          # Look & layout
           template: terminal
           base: header, repositories
           config_timezone: Europe/Berlin
           config_order: base.header, languages, repositories, lines
 
-          # --- Plugins ---
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_ignored: >-
@@ -50,72 +43,23 @@ jobs:
 
           plugin_lines: yes
 
-          # --- Styling (includes Bescii-Mono + header button fix) ---
           extras_css: |
-            /* ---------------------------------------------------------
-               Font: Bescii-Mono (Codeberg raw)
-               --------------------------------------------------------- */
-
-            @font-face {
-              font-family: "Bescii Mono";
-              src:
-                url("https://codeberg.org/Dmian/font-bescii/raw/branch/main/fonts/v3/Bescii-Mono.woff2") format("woff2"),
-                url("https://codeberg.org/Dmian/font-bescii/raw/branch/main/fonts/v3/Bescii-Mono.woff") format("woff"),
-                url("https://codeberg.org/Dmian/font-bescii/raw/branch/main/fonts/v3/Bescii-Mono.ttf") format("truetype");
-              font-weight: 400;
-              font-style: normal;
-              font-display: swap;
-            }
-
-            /* Apply Bescii to the terminal content */
+            /* Monospace, grid-y, terminal-ish */
             svg {
-              font-family: "Bescii Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+              font-family: "JetBrains Mono", "Fira Code", Consolas, Menlo, monospace;
               letter-spacing: 0.08em;
-            }
-
-            /* Slightly tighter, more pixel-font-friendly rhythm */
-            pre, code, text, tspan {
-              font-family: "Bescii Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            }
-
-            /* Brutalist framing */
-            .items, .row, .column {
-              border: 1px solid #ffffff22;
             }
 
             h1, h2, h3 {
               text-transform: uppercase;
             }
 
+            /* Slightly chunkier headings */
             h1 {
               font-size: 1.2em;
             }
 
-            /* ---------------------------------------------------------
-               Fix: window header buttons (glyphs misaligned with pixel fonts)
-               Strategy:
-               - force header back to system UI font (better vertical metrics)
-               - center header glyphs via baseline + line-height rules
-               --------------------------------------------------------- */
-
-            header,
-            header * {
-              font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-              letter-spacing: 0 !important;
-            }
-
-            /* Center SVG text in header reliably */
-            header text,
-            header tspan {
-              dominant-baseline: middle;
-              alignment-baseline: middle;
-            }
-
-            /* If the buttons are spans/groups, make them flex-centered (harmless if not) */
-            header span,
-            header a,
-            header .button,
-            header .buttons,
-            header .buttons * {
-              line-height: 1 !important;
+            /* Subtle borders for a brutalist card feel */
+            .items, .row, .column {
+              border: 1px solid #ffffff22;
             }
