@@ -13,6 +13,7 @@ concurrency:
 
 jobs:
   github-metrics:
+    # Critical: ubuntu-latest is now 24.04; released Metrics image can fail building there.
     runs-on: ubuntu-22.04
     environment:
       name: production
@@ -26,13 +27,11 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           user: humanbydefinition
           filename: github-metrics.svg
-
           template: terminal
           base: header, repositories
           config_timezone: Europe/Berlin
           config_order: base.header, languages, repositories, lines
 
-          # --- Plugins ---
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_ignored: >-
@@ -41,72 +40,26 @@ jobs:
 
           plugin_repositories: yes
           plugin_repositories_pinned: 4
+
           plugin_lines: yes
 
-          # --- Styling ---
           extras_css: |
-            /* =========================================================
-               Font: Bescii-Mono (Codeberg)
-               ========================================================= */
-
-            @font-face {
-              font-family: "Bescii Mono";
-              src:
-                url("https://codeberg.org/Dmian/font-bescii/raw/branch/main/fonts/v3/Bescii-Mono.woff2") format("woff2"),
-                url("https://codeberg.org/Dmian/font-bescii/raw/branch/main/fonts/v3/Bescii-Mono.woff") format("woff"),
-                url("https://codeberg.org/Dmian/font-bescii/raw/branch/main/fonts/v3/Bescii-Mono.ttf") format("truetype");
-              font-weight: 400;
-              font-style: normal;
-              font-display: swap;
-            }
-
-            /* =========================================================
-               Terminal body — force Bescii on ALL SVG text
-               ========================================================= */
-
-            svg text,
-            svg tspan {
-              font-family: "Bescii Mono", ui-monospace, SFMono-Regular,
-                           Menlo, Monaco, Consolas, "Liberation Mono",
-                           "Courier New", monospace;
+            /* Monospace, grid-y, terminal-ish */
+            svg {
+              font-family: "JetBrains Mono", "Fira Code", Consolas, Menlo, monospace;
               letter-spacing: 0.08em;
             }
-
-            /* Slightly tighter for bitmap-style fonts */
-            svg text {
-              dominant-baseline: middle;
-            }
-
-            /* =========================================================
-               Header / window bar — keep UI font (fixes icon alignment)
-               ========================================================= */
-
-            header,
-            header * {
-              font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                           "Segoe UI", sans-serif !important;
-              letter-spacing: 0 !important;
-            }
-
-            /* Ensure header glyphs stay centered */
-            header text,
-            header tspan {
-              dominant-baseline: middle;
-              alignment-baseline: middle;
-            }
-
-            /* =========================================================
-               Brutalist framing
-               ========================================================= */
 
             h1, h2, h3 {
               text-transform: uppercase;
             }
 
+            /* Slightly chunkier headings */
             h1 {
               font-size: 1.2em;
             }
 
+            /* Subtle borders for a brutalist card feel */
             .items, .row, .column {
               border: 1px solid #ffffff22;
             }
