@@ -1,6 +1,5 @@
 → [code.textmode.art](https://code.textmode.art)    
-→ [examples.textmode.art](https://examples.textmode.art)    
-→ [synth.textmode.art](https://synth.textmode.art)    
-→ [editor.textmode.art](https://editor.textmode.art)    
+→ [editor.textmode.art](https://editor.textmode.art)  
+→ [examples.textmode.art](https://examples.textmode.art)         
 → [create.textmode.art](https://create.textmode.art)    
 → [automata.textmode.art](https://automata.textmode.art)    
