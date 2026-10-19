@@ -1,4 +1,5 @@
 → [code.textmode.art](https://code.textmode.art)    
+→ [explore.textmode.art](https://explore.textmode.art)    
 → [editor.textmode.art](https://editor.textmode.art)       
 → [create.textmode.art](https://create.textmode.art)    
 → [export.textmode.art](https://export.textmode.art)  
